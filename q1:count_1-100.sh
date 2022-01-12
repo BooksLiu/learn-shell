@@ -6,7 +6,7 @@ i=1
 result=0
 while [ $i -lt 101 ]
 do
-    result=$(expr $result + $i) # let result=
-    i=$(expr $i + 1)
+    result=$(expr $result + $i) # let result=result+i 更好
+    i=$(expr $i + 1)            # let i=i+1 或者 i=$((i+1)) 更好
 done
 echo "sum of 1...100 result is $result"
